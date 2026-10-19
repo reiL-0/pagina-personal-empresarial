@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maderas Regias: fabricación de muebles de madera a la medida en Monterrey, Nuevo León.">
+  <title>Maderas Regias | Muebles de madera a la medida</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="salto" href="#proyectos">Saltar al contenido</a>
+
+  <header id="inicio" class="encabezado">
+    <nav class="menu" aria-label="Menú principal">
+      <a class="logo" href="#inicio">Maderas Regias</a>
+      <ul class="menu-enlaces">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="presentacion">
+      <h1>Maderas Regias S.A. de C.V.</h1>
+      <p class="descripcion">
+        Somos una empresa del sector secundario dedicada a la fabricación de
+        muebles de madera a la medida para casas y oficinas en Monterrey y su área metropolitana.
+      </p>
+      <div class="mision-vision">
+        <article class="tarjeta">
+          <h2>Misión</h2>
+          <p>Crear muebles duraderos y bien acabados que mejoren los espacios de nuestros clientes.</p>
+        </article>
+        <article class="tarjeta">
+          <h2>Visión</h2>
+          <p>Ser la carpintería de referencia del norte de México por calidad, diseño y servicio.</p>
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="proyectos" class="seccion">
+      <h2>Proyectos destacados</h2>
+      <div class="rejilla">
+
+        <article class="proyecto">
+          <img src="images/comedor.svg" alt="Ilustración de una mesa de comedor de madera con cuatro sillas">
+          <h3>Comedor familiar</h3>
+          <p>Mesa de madera de encino con seis sillas, fabricada a la medida para una casa en San Pedro.</p>
+          <a class="boton" href="#contacto">Cotizar uno similar</a>
+        </article>
+
+        <article class="proyecto">
+          <img src="images/closet.svg" alt="Ilustración de un clóset de madera con dos puertas y cajones">
+          <h3>Clóset empotrado</h3>
+          <p>Clóset de pared completa con cajones y repisas ajustables para aprovechar mejor el espacio.</p>
+          <a class="boton" href="#contacto">Cotizar uno similar</a>
+        </article>
+
+        <article class="proyecto">
+          <img src="images/escritorio.svg" alt="Ilustración de un escritorio de madera con un cajón y una lámpara">
+          <h3>Escritorio para oficina</h3>
+          <p>Escritorio ejecutivo con pasacables integrado, diseñado para oficinas pequeñas y home office.</p>
+          <a class="boton" href="#contacto">Cotizar uno similar</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion seccion-contacto">
+      <h2>Contáctanos</h2>
+      <p>Cuéntanos qué mueble necesitas y te responderemos en un máximo de 24 horas.</p>
+
+      <form class="formulario" action="mailto:contacto@maderasregias.example" method="post" enctype="text/plain">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required autocomplete="email">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required minlength="10"></textarea>
+
+        <button type="submit" class="boton">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <ul class="redes">
+      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    </ul>
+    <p>&copy; 2026 Maderas Regias S.A. de C.V. Todos los derechos reservados.</p>
+    <p class="aviso">Actividad 1 · Matrícula al07181224</p>
+  </footer>
+
+</body>
+</html>

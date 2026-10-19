@@ -1,0 +1,265 @@
+/* ===== Variables de color (contraste revisado para WCAG AA) ===== */
+:root {
+  --cafe-oscuro: #3b2312;
+  --cafe: #6b3f17;
+  --crema: #fbf6ee;
+  --beige: #efe3d0;
+  --blanco: #ffffff;
+}
+
+/* ===== Estilos generales ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--cafe-oscuro);
+  background-color: var(--crema);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--cafe);
+}
+
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #1a5fb4;
+  outline-offset: 2px;
+}
+
+/* Enlace para saltar al contenido (accesibilidad) */
+.salto {
+  position: absolute;
+  left: -999px;
+  background: var(--blanco);
+  padding: 0.5rem 1rem;
+}
+
+.salto:focus {
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+/* ===== Encabezado ===== */
+.encabezado {
+  background-color: var(--cafe-oscuro);
+  color: var(--blanco);
+  padding: 0 1.5rem 3rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.menu-enlaces {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-enlaces a {
+  color: var(--blanco);
+}
+
+.presentacion {
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.presentacion h1 {
+  font-size: 2.4rem;
+  margin: 0 0 1rem;
+}
+
+.descripcion {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+.mision-vision {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tarjeta {
+  flex: 1;
+  max-width: 400px;
+  background-color: var(--beige);
+  color: var(--cafe-oscuro);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+}
+
+/* ===== Secciones ===== */
+.seccion {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.seccion h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+/* ===== Proyectos ===== */
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.proyecto {
+  background-color: var(--blanco);
+  border: 2px solid var(--beige);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ===== Botones ===== */
+.boton {
+  display: inline-block;
+  background-color: var(--cafe);
+  color: var(--blanco);
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: var(--cafe-oscuro);
+}
+
+/* ===== Contacto ===== */
+#contacto {
+  background-color: var(--beige);
+  max-width: none;
+}
+
+#contacto > * {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formulario label {
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.7rem;
+  border: 2px solid var(--cafe);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.formulario input:invalid:not(:placeholder-shown):not(:focus),
+.formulario textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #a4161a;
+}
+
+.formulario .boton {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+/* ===== Pie de página ===== */
+.pie {
+  background-color: var(--cafe-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.redes a {
+  color: var(--blanco);
+}
+
+.aviso {
+  font-size: 0.9rem;
+}
+
+/* ===== Diseño responsivo ===== */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .presentacion h1 {
+    font-size: 1.8rem;
+  }
+
+  .mision-vision {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rejilla {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario .boton {
+    align-self: stretch;
+    text-align: center;
+  }
+}
