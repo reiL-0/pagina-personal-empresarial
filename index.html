@@ -73,7 +73,7 @@
       <h2>Contáctanos</h2>
       <p>Cuéntanos qué mueble necesitas y te responderemos en un máximo de 24 horas.</p>
 
-      <form class="formulario" action="mailto:contacto@maderasregias.example" method="post" enctype="text/plain">
+      <form class="formulario">
         <label for="nombre">Nombre completo:</label>
         <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
 
@@ -88,6 +88,12 @@
     </section>
   </main>
 
+  <dialog id="exito" aria-labelledby="exito-titulo">
+    <h2 id="exito-titulo">¡Mensaje enviado!</h2>
+    <p>Tu mensaje se envió con éxito. Te responderemos pronto.</p>
+    <button type="button" class="boton" id="cerrar">Aceptar</button>
+  </dialog>
+
   <footer class="pie">
     <ul class="redes">
       <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
@@ -97,5 +103,15 @@
     <p class="aviso">Actividad 1 · Matrícula al07181224</p>
   </footer>
 
+  <script>
+    const form = document.querySelector(".formulario");
+    const exito = document.getElementById("exito");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      form.reset();
+      exito.showModal();
+    });
+    document.getElementById("cerrar").addEventListener("click", () => exito.close());
+  </script>
 </body>
 </html>
